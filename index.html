@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./src/main.js" defer></script>
+    <title>Tax Calculator</title>
+  </head>
+  <body>
+
+    <main id="app-container">
+      <h1>Calculadora de Imposto</h1>
+
+      <h2>Valores de entrada</h2>
+      <ul id="app-container-ul"></ul>
+
+      <div id="result"></div>
+
+      <div class="btns"> 
+        <button class="app-container-btn" id="darkLight" aria-label="Alterar tema">Tema</button>
+        <button class="app-container-btn" id="calculate" aria-label="Calcular impostos">Calcular</button>
+        <button class="app-container-btn" id="clear" aria-label="Limpar valores">Limpar</button>
+      </div>
+    </main>
+
+    <template id="template">
+      <li class="template-li">
+        <label for="tax-input">Valor do Imposto:</label>
+        <input class="tax-input" required type="number" placeholder="EX: 0">
+      </li>
+    </template>
+
+  </body>
+</html>

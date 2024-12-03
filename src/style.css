@@ -1,0 +1,119 @@
+:root {
+  --bg-light: #b1d5f841;
+  --bg-dark: #41424441;
+  --text-light: #000;
+  --text-dark: #000;
+  --btn-hover-bg: #519c7f;
+  --btn-bg: #fff;
+  --btn-text: #000;
+  --template-hover-light: #dfdfdf;
+  --template-hover-dark: #dfdfdf;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body.theme {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+input {
+  padding: 0.6rem 0.8rem;
+}
+
+#app-container {
+  min-width: 60%;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#app-container.theme {
+  background-color: #3b3030;
+  color: var(--text-light);
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.app-container-btn {
+  flex: 1; 
+  padding: 0.6rem;
+  border-radius: 10px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  cursor: pointer;
+}
+
+.app-container-btn:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--text-light);
+  transition: 0.6s;
+}
+
+.app-container-btn:focus {
+  outline: 2px solid var(--btn-hover-bg);
+  outline-offset: 2px;
+}
+
+.template-li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.template-li:hover {
+  transition: 0.6s;
+  background-color: var(--template-hover-light);
+  color: var(--text-light);
+}
+
+body.theme .template-li:hover {
+  background-color: var(--template-hover-dark);
+}
+
+#app-container-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 60%;
+}
+
+@media (max-width: 950px) {
+  #app-container {
+      min-width: 90%;
+      padding: 2rem 1rem;
+  }
+
+  .template-li {
+      flex-direction: column;
+  }
+}
